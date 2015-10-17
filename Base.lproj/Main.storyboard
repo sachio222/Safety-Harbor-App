@@ -49,12 +49,12 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-rX-AIz">
                                         <rect key="frame" x="0.0" y="102" width="287" height="156"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="SAFETY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaT-jy-glq">
-                                                <rect key="frame" x="0.0" y="0.0" width="218" height="78"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="SAFETY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EaT-jy-glq">
+                                                <rect key="frame" x="0.0" y="0.0" width="229" height="78"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="78" id="BiI-Dp-tuU"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="59"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="62"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </label>
@@ -130,10 +130,10 @@
             </objects>
             <point key="canvasLocation" x="223" y="339"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="VhI-Za-Xph">
             <objects>
-                <viewController id="Cua-We-1w2" sceneMemberID="viewController">
+                <viewController id="Cua-We-1w2" customClass="DetailViewController" customModule="safety_harbor" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dUv-5R-BHq"/>
                         <viewControllerLayoutGuide type="bottom" id="GZa-Ga-K1q"/>
@@ -141,7 +141,149 @@
                     <view key="view" contentMode="scaleToFill" id="cGF-XJ-8mq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pier-evening" translatesAutoresizingMaskIntoConstraints="NO" id="tbF-rr-Uru">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="0WU-v6-oAd"/>
+                                    <constraint firstAttribute="height" constant="150" id="ITN-iq-LPN"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="evb-zN-RRr"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0WU-v6-oAd"/>
+                                        <exclude reference="evb-zN-RRr"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Exc-fH-gcm">
+                                <rect key="frame" x="20" y="165" width="560" height="420"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3o1-sQ-jpB">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="58"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POPULATION" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5h-9x-a8E">
+                                                <rect key="frame" x="0.0" y="0.0" width="233" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="BEa-t0-3Mj"/>
+                                                    <constraint firstAttribute="width" constant="233" id="QlA-5X-5jM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" red="0.58234690656565657" green="0.58234690656565657" blue="0.58234690656565657" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17,139 (2013)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WdU-Mq-pNn">
+                                                <rect key="frame" x="0.0" y="34" width="233" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="233" id="DUY-JH-VEG"/>
+                                                    <constraint firstAttribute="height" constant="24" id="Gxm-51-gwP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" red="0.73143544819999995" green="0.73143544819999995" blue="0.73143544819999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Kg0-7U-gpU">
+                                        <rect key="frame" x="0.0" y="72" width="560" height="348"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HISTORY" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atK-nH-aQI">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="24"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="24" id="ISw-fy-yQ5"/>
+                                                    <constraint firstAttribute="width" constant="233" id="Pl2-qU-UjX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" red="0.58234690659999999" green="0.58234690659999999" blue="0.58234690659999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="Pl2-qU-UjX"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="50" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojP-vy-EAF">
+                                                <rect key="frame" x="0.0" y="24" width="560" height="324"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="233" id="EGw-9O-jz4"/>
+                                                    <constraint firstAttribute="height" constant="24" id="pta-Gj-KE6"/>
+                                                </constraints>
+                                                <mutableString key="text">The area has been inhabited since the Stone Age. In June 2008, a 6,000 year old spearhead was found at Marshall Street Park.[7] The inhabitants of the area at the time of Spanish exploration were the Tocobaga people, who lived in villages around Tampa Bay. The adaptation of this culture relied on wild resources. Safety Harbor sites have yielded pottery, and artifacts of copper, shell, and stone. The Tocobaga were known for constructing various ceremonial and communal mounds to bury the dead. Most of these mounds were destroyed in the early 1900s due to development. However, one of these ceremonial mounds is still visible in Safety Harbor's Phillippe Park (see photo). Shells found in these mounds were used to pave city streets.</mutableString>
+                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="17"/>
+                                                <color key="textColor" red="0.73143544819999995" green="0.73143544819999995" blue="0.73143544819999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="pta-Gj-KE6"/>
+                                                        <exclude reference="EGw-9O-jz4"/>
+                                                    </mask>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RaX-2h-hfD">
+                                <rect key="frame" x="0.0" y="117" width="69" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="7hY-RK-JOr"/>
+                                    <constraint firstAttribute="width" constant="69" id="M7o-Xw-UTY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="Cua-We-1w2" eventType="touchUpInside" id="h1I-Q4-BS3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ABOUT SAFETY HARBOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="387-jo-87h">
+                                <rect key="frame" x="184" y="63" width="233" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="iC5-dA-uPK"/>
+                                    <constraint firstAttribute="width" constant="233" id="tfK-Tp-iFh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.52000000000000002" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="1"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Exc-fH-gcm" secondAttribute="trailing" id="Fcq-ho-dfE"/>
+                            <constraint firstItem="GZa-Ga-K1q" firstAttribute="top" secondItem="Exc-fH-gcm" secondAttribute="bottom" constant="15" id="FtA-xc-i38"/>
+                            <constraint firstItem="Exc-fH-gcm" firstAttribute="leading" secondItem="cGF-XJ-8mq" secondAttribute="leadingMargin" id="GxY-rK-6SM"/>
+                            <constraint firstItem="tbF-rr-Uru" firstAttribute="leading" secondItem="cGF-XJ-8mq" secondAttribute="leading" id="LnD-CM-ZXg"/>
+                            <constraint firstItem="Exc-fH-gcm" firstAttribute="top" secondItem="RaX-2h-hfD" secondAttribute="bottom" constant="15" id="Ptn-H2-KOp"/>
+                            <constraint firstAttribute="trailing" secondItem="tbF-rr-Uru" secondAttribute="trailing" id="UAw-3e-EpH"/>
+                            <constraint firstItem="tbF-rr-Uru" firstAttribute="top" secondItem="cGF-XJ-8mq" secondAttribute="top" id="Uuq-44-iuN"/>
+                            <constraint firstItem="tbF-rr-Uru" firstAttribute="top" secondItem="cGF-XJ-8mq" secondAttribute="top" id="VZ7-1H-02T"/>
+                            <constraint firstItem="387-jo-87h" firstAttribute="centerX" secondItem="cGF-XJ-8mq" secondAttribute="centerX" id="Wqy-HF-OJk"/>
+                            <constraint firstItem="tbF-rr-Uru" firstAttribute="leading" secondItem="cGF-XJ-8mq" secondAttribute="leading" id="ca9-Vh-rEH"/>
+                            <constraint firstItem="RaX-2h-hfD" firstAttribute="leading" secondItem="cGF-XJ-8mq" secondAttribute="leading" id="dJd-bi-o8B"/>
+                            <constraint firstItem="RaX-2h-hfD" firstAttribute="top" secondItem="dUv-5R-BHq" secondAttribute="bottom" constant="97" id="fJc-u5-aKz"/>
+                            <constraint firstAttribute="trailing" secondItem="tbF-rr-Uru" secondAttribute="trailing" id="lA6-6F-tmb"/>
+                            <constraint firstItem="387-jo-87h" firstAttribute="top" secondItem="dUv-5R-BHq" secondAttribute="bottom" constant="43" id="pHk-3M-r4f"/>
+                            <constraint firstItem="Exc-fH-gcm" firstAttribute="top" secondItem="RaX-2h-hfD" secondAttribute="bottom" constant="28" id="sjf-Ni-vsB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LnD-CM-ZXg"/>
+                                <exclude reference="UAw-3e-EpH"/>
+                                <exclude reference="Uuq-44-iuN"/>
+                                <exclude reference="sjf-Ni-vsB"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ABE-dJ-fN9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -151,6 +293,7 @@
     </scenes>
     <resources>
         <image name="compass" width="35" height="35"/>
+        <image name="pier-evening" width="1024" height="768"/>
         <image name="pier-lights" width="1600" height="974"/>
     </resources>
 </document>
